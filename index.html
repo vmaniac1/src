@@ -64,7 +64,11 @@
             max-width: 650px;
             width: 100%;
             margin: 0 10px;
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 35, 0.95));
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 35, 0.95)),
+                        url('assets/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
             backdrop-filter: blur(25px);
             border-radius: 25px;
             padding: clamp(25px, 5vw, 50px) clamp(20px, 4vw, 45px);
@@ -73,6 +77,22 @@
                         0 0 80px rgba(78, 205, 196, 0.1);
             border: 1px solid rgba(78, 205, 196, 0.2);
             animation: slideIn 0.8s ease-out;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('assets/bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            border-radius: 25px;
+            z-index: -1;
         }
 
         @keyframes slideIn {
