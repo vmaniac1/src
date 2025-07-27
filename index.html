@@ -56,7 +56,8 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            min-height: calc(100vh - 200px);
+            min-height: calc(100vh - 180px);
+            padding: 10px 0;
         }
 
         .container {
@@ -66,7 +67,7 @@
             background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 35, 0.95));
             backdrop-filter: blur(25px);
             border-radius: 25px;
-            padding: 50px 45px;
+            padding: clamp(25px, 5vw, 50px) clamp(20px, 4vw, 45px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.1),
                         0 0 80px rgba(78, 205, 196, 0.1);
@@ -122,7 +123,7 @@
 
         h2 {
             color: #f0f0f0;
-            margin-bottom: 45px;
+            margin-bottom: clamp(25px, 5vw, 45px);
             font-size: clamp(1.4rem, 4vw, 2rem);
             font-weight: 600;
             text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
@@ -149,7 +150,7 @@
             height: 12px;
             background: rgba(15, 15, 35, 0.8);
             border-radius: 6px;
-            margin-bottom: 45px;
+            margin-bottom: clamp(25px, 5vw, 45px);
             overflow: hidden;
             box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(78, 205, 196, 0.2);
@@ -165,27 +166,27 @@
 
         .options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 45px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: clamp(15px, 3vw, 20px);
+            margin-bottom: clamp(20px, 4vw, 30px);
         }
 
         .option-btn {
             background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
             border: 2px solid rgba(78, 205, 196, 0.3);
             color: #e8e8e8;
-            padding: clamp(20px, 4vw, 30px) 20px;
+            padding: clamp(15px, 3vw, 25px) 15px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            font-size: clamp(0.85rem, 2.2vw, 1rem);
             font-weight: 600;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(15px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            min-height: clamp(120px, 20vw, 140px);
+            gap: clamp(10px, 2vw, 15px);
+            min-height: clamp(90px, 15vw, 120px);
             justify-content: center;
             position: relative;
             overflow: hidden;
@@ -209,7 +210,7 @@
         }
 
         .option-btn i {
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
@@ -297,7 +298,7 @@
 
         .nav-buttons {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             margin-top: 40px;
             gap: 15px;
             flex-wrap: wrap;
@@ -572,23 +573,32 @@
         
         @media (max-width: 480px) {
             body {
-                padding: 10px 0;
+                padding: 5px 0;
+            }
+
+            .main-content {
+                min-height: calc(100vh - 160px);
             }
 
             .container {
                 margin: 0 5px;
-                padding: 30px 20px;
+                padding: 20px 15px;
                 border-radius: 20px;
             }
 
             .options {
-                grid-template-columns: 1fr;
-                gap: 15px;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
             }
 
             .option-btn {
-                min-height: 100px;
-                padding: 20px 15px;
+                min-height: 80px;
+                padding: 15px 10px;
+                font-size: 0.8rem;
+            }
+
+            .option-btn i {
+                font-size: 1.3rem;
             }
 
             .form-group.grid {
@@ -616,6 +626,7 @@
             .feature-item {
                 min-width: auto;
                 justify-content: flex-start;
+                font-size: 0.8rem;
             }
 
             .footer-links {
@@ -631,6 +642,40 @@
 
             .checkbox-wrapper {
                 align-self: flex-start;
+            }
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            .intro-text {
+                margin-bottom: 20px;
+                padding: 15px 20px;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            .progress-bar {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 350px) {
+            .options {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .option-btn {
+                min-height: 70px;
+                padding: 12px 8px;
+            }
+
+            .feature-item {
+                font-size: 0.75rem;
             }
         }
 
@@ -678,47 +723,55 @@
         @media (max-height: 600px) and (orientation: landscape) {
             body {
                 justify-content: flex-start;
-                padding: 10px 0;
+                padding: 5px 0;
             }
 
             .main-content {
                 min-height: auto;
+                padding: 5px 0;
             }
 
             .container {
-                padding: 20px 30px;
+                padding: 15px 25px;
             }
 
             h1 {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
+                font-size: 1.8rem;
             }
 
             .intro-text {
-                margin-bottom: 20px;
-                padding: 15px 20px;
+                margin-bottom: 15px;
+                padding: 12px 15px;
+                font-size: 0.95rem;
             }
 
             h2 {
-                margin-bottom: 25px;
+                margin-bottom: 15px;
+                font-size: 1.3rem;
             }
 
             .options {
-                margin-bottom: 25px;
-                gap: 15px;
-            }
-
-            .option-btn {
-                min-height: 80px;
-                padding: 15px 20px;
+                margin-bottom: 15px;
                 gap: 10px;
             }
 
+            .option-btn {
+                min-height: 60px;
+                padding: 10px 15px;
+                gap: 8px;
+            }
+
             .option-btn i {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
 
             .features-section {
-                padding: 20px 0;
+                padding: 15px 0;
+            }
+
+            .progress-bar {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -757,10 +810,6 @@
                         <span>Mehr als 1000€</span>
                     </button>
                 </div>
-                <div class="nav-buttons">
-                    <div></div>
-                    <button class="btn btn-primary" id="next1" disabled>Weiter</button>
-                </div>
             </div>
 
             <!-- Seite 2: Energieart -->
@@ -786,7 +835,6 @@
                 </div>
                 <div class="nav-buttons">
                     <button class="btn btn-secondary" id="back2">Zurück</button>
-                    <button class="btn btn-primary" id="next2" disabled>Weiter</button>
                 </div>
             </div>
 
@@ -813,7 +861,6 @@
                 </div>
                 <div class="nav-buttons">
                     <button class="btn btn-secondary" id="back3">Zurück</button>
-                    <button class="btn btn-primary" id="next3" disabled>Weiter</button>
                 </div>
             </div>
 
@@ -928,7 +975,7 @@
             updateProgress();
         }
 
-        // Option-Button Event Listener
+        // Option-Button Event Listener mit Auto-Advance
         document.querySelectorAll('.option-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const page = this.closest('.page');
@@ -939,18 +986,22 @@
                 const value = this.dataset.value;
                 answers[pageId] = value;
                 
-                // Next-Button aktivieren
-                const nextBtn = page.querySelector('.btn-primary');
-                if (nextBtn) nextBtn.disabled = false;
+                // Auto-advance zur nächsten Seite nach kurzer Verzögerung
+                setTimeout(() => {
+                    if (pageId === 'page1') {
+                        showPage(2);
+                    } else if (pageId === 'page2') {
+                        showPage(3);
+                    } else if (pageId === 'page3') {
+                        showPage(4);
+                    }
+                }, 500);
             });
         });
 
-        // Navigation Event Listeners
-        document.getElementById('next1').addEventListener('click', () => showPage(2));
+        // Navigation Event Listeners (nur für Zurück-Buttons)
         document.getElementById('back2').addEventListener('click', () => showPage(1));
-        document.getElementById('next2').addEventListener('click', () => showPage(3));
         document.getElementById('back3').addEventListener('click', () => showPage(2));
-        document.getElementById('next3').addEventListener('click', () => showPage(4));
         document.getElementById('back4').addEventListener('click', () => showPage(3));
 
         // Checkbox validation
