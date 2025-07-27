@@ -812,23 +812,23 @@
                 <h1>💡 Energie-Check</h1>
                 <p class="intro-text">🎯 Lassen Sie uns herausfinden, wie kostengünstig Strom und Gas für Sie sein können!</p>
                 <h2>💰 Wie viel zahlen Sie monatlich für Strom & Gas?</h2>
-                <div class="options">
-                    <button class="option-btn" data-value="0-300">
-                        <i class="fas fa-piggy-bank"></i>
-                        <span>0-300€</span>
-                    </button>
-                    <button class="option-btn" data-value="300-700">
-                        <i class="fas fa-home"></i>
-                        <span>300-700€</span>
-                    </button>
-                    <button class="option-btn" data-value="700-1000">
-                        <i class="fas fa-chart-line"></i>
-                        <span>700-1000€</span>
-                    </button>
-                    <button class="option-btn" data-value="1000+">
-                        <i class="fas fa-bolt"></i>
-                        <span>Mehr als 1000€</span>
-                    </button>
+                
+                <div class="form-group" style="text-align: center; margin-bottom: 40px;">
+                    <div style="position: relative; max-width: 300px; margin: 0 auto;">
+                        <input type="number" 
+                               id="monthlyAmount" 
+                               name="monthlyAmount" 
+                               placeholder="Betrag eingeben" 
+                               min="0" 
+                               step="10"
+                               style="font-size: clamp(1.2rem, 3vw, 1.5rem); text-align: center; padding-right: 40px;"
+                               required>
+                        <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: rgba(232, 232, 232, 0.7); font-size: clamp(1.2rem, 3vw, 1.5rem); pointer-events: none;">€</span>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons" style="justify-content: center;">
+                    <button class="btn btn-primary" id="next1" disabled>Weiter</button>
                 </div>
             </div>
 
@@ -995,7 +995,21 @@
             updateProgress();
         }
 
-        // Option-Button Event Listener mit Auto-Advance
+        // Input validation für Seite 1
+        const monthlyAmountInput = document.getElementById('monthlyAmount');
+        const next1Btn = document.getElementById('next1');
+
+        monthlyAmountInput.addEventListener('input', function() {
+            const value = this.value.trim();
+            if (value && parseFloat(value) > 0) {
+                next1Btn.disabled = false;
+                answers['page1'] = value + '€';
+            } else {
+                next1Btn.disabled = true;
+            }
+        });
+
+        // Option-Button Event Listener mit Auto-Advance (nur für Seiten 2 und 3)
         document.querySelectorAll('.option-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const page = this.closest('.page');
@@ -1008,9 +1022,7 @@
                 
                 // Auto-advance zur nächsten Seite nach kurzer Verzögerung
                 setTimeout(() => {
-                    if (pageId === 'page1') {
-                        showPage(2);
-                    } else if (pageId === 'page2') {
+                    if (pageId === 'page2') {
                         showPage(3);
                     } else if (pageId === 'page3') {
                         showPage(4);
@@ -1019,7 +1031,8 @@
             });
         });
 
-        // Navigation Event Listeners (nur für Zurück-Buttons)
+        // Navigation Event Listeners
+        document.getElementById('next1').addEventListener('click', () => showPage(2));
         document.getElementById('back2').addEventListener('click', () => showPage(1));
         document.getElementById('back3').addEventListener('click', () => showPage(2));
         document.getElementById('back4').addEventListener('click', () => showPage(3));
@@ -1075,4 +1088,5 @@
         updateProgress();
     </script>
 </body>
+</html>
 </html>
