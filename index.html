@@ -36,9 +36,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(147, 197, 253, 0.15) 0%, transparent 50%);
             animation: float 25s ease-in-out infinite;
             pointer-events: none;
             z-index: -1;
@@ -64,7 +64,7 @@
             max-width: 650px;
             width: 100%;
             margin: 0 10px;
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 35, 0.95)),
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.95)),
                         url('assets/bg.jpg');
             background-size: cover;
             background-position: center;
@@ -74,8 +74,8 @@
             padding: clamp(25px, 5vw, 50px) clamp(20px, 4vw, 45px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.1),
-                        0 0 80px rgba(78, 205, 196, 0.1);
-            border: 1px solid rgba(78, 205, 196, 0.2);
+                        0 0 80px rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             animation: slideIn 0.8s ease-out;
             position: relative;
         }
@@ -116,19 +116,19 @@
         }
 
         h1 {
-            background: linear-gradient(45deg, #4ecdc4, #ff6b9d, #ffd93d);
+            background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 15px;
             font-size: clamp(2rem, 5vw, 2.8rem);
             font-weight: 700;
-            text-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+            text-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
             letter-spacing: -1px;
         }
 
         .intro-text {
-            background: linear-gradient(145deg, rgba(78, 205, 196, 0.15), rgba(26, 26, 46, 0.8));
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(30, 58, 138, 0.8));
             color: #e8e8e8;
             font-size: clamp(1rem, 3vw, 1.2rem);
             margin-bottom: 35px;
@@ -137,8 +137,8 @@
             border-radius: 20px;
             font-weight: 500;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-                        inset 0 1px 0 rgba(78, 205, 196, 0.1);
-            border: 1px solid rgba(78, 205, 196, 0.2);
+                        inset 0 1px 0 rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         h2 {
@@ -156,32 +156,32 @@
         }
 
         .progress-number {
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: clamp(1.1rem, 3vw, 1.4rem);
             font-weight: 700;
-            text-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
         }
 
         .progress-bar {
             width: 100%;
             height: 12px;
-            background: rgba(15, 15, 35, 0.8);
+            background: rgba(15, 23, 42, 0.8);
             border-radius: 6px;
             margin-bottom: clamp(25px, 5vw, 45px);
             overflow: hidden;
             box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(78, 205, 196, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .progress {
             height: 100%;
-            background: linear-gradient(90deg, #4ecdc4, #ffd93d, #ff6b9d);
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #6366f1);
             border-radius: 6px;
             transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
         }
 
         .options {
@@ -192,8 +192,8 @@
         }
 
         .option-btn {
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
-            border: 2px solid rgba(78, 205, 196, 0.3);
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
+            border: 2px solid rgba(59, 130, 246, 0.4);
             color: #e8e8e8;
             padding: clamp(15px, 3vw, 25px) 15px;
             border-radius: 20px;
@@ -221,7 +221,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
             transition: left 0.6s;
         }
 
@@ -235,34 +235,35 @@
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
 
-        .option-btn:nth-child(1) i { color: #4ecdc4; }
-        .option-btn:nth-child(2) i { color: #ffd93d; }
-        .option-btn:nth-child(3) i { color: #ff6b9d; }
-        .option-btn:nth-child(4) i { color: #a8e6cf; }
+        .option-btn:nth-child(1) i { color: #3b82f6; }
+        .option-btn:nth-child(2) i { color: #8b5cf6; }
+        .option-btn:nth-child(3) i { color: #6366f1; }
+        .option-btn:nth-child(4) i { color: #06b6d4; }
+        .option-btn:nth-child(5) i { color: #10b981; }
 
         .option-btn:hover {
-            background: linear-gradient(145deg, rgba(78, 205, 196, 0.2), rgba(26, 26, 46, 0.9));
-            border-color: rgba(78, 205, 196, 0.6);
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.3), rgba(30, 58, 138, 0.9));
+            border-color: rgba(59, 130, 246, 0.7);
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
-                        0 0 30px rgba(78, 205, 196, 0.3);
+                        0 0 30px rgba(59, 130, 246, 0.4);
         }
 
         .option-btn:hover i {
             transform: scale(1.2) rotate(10deg);
-            color: #4ecdc4;
+            color: #3b82f6;
         }
 
         .option-btn.selected {
-            background: linear-gradient(145deg, rgba(78, 205, 196, 0.3), rgba(26, 26, 46, 0.9));
-            border-color: rgba(78, 205, 196, 0.8);
-            box-shadow: 0 15px 35px rgba(78, 205, 196, 0.4),
-                        inset 0 1px 0 rgba(78, 205, 196, 0.2);
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.4), rgba(30, 58, 138, 0.9));
+            border-color: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5),
+                        inset 0 1px 0 rgba(59, 130, 246, 0.3);
             transform: translateY(-5px);
         }
 
         .option-btn.selected i {
-            color: #4ecdc4;
+            color: #3b82f6;
             transform: scale(1.1);
         }
 
@@ -280,7 +281,7 @@
         label {
             display: block;
             margin-bottom: 12px;
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -291,8 +292,8 @@
         input {
             width: 100%;
             padding: clamp(15px, 3vw, 18px) 20px;
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
-            border: 2px solid rgba(78, 205, 196, 0.3);
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
+            border: 2px solid rgba(59, 130, 246, 0.4);
             border-radius: 12px;
             color: #e8e8e8;
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
@@ -304,9 +305,9 @@
 
         input:focus {
             outline: none;
-            border-color: rgba(78, 205, 196, 0.8);
-            background: rgba(26, 26, 46, 0.9);
-            box-shadow: 0 0 25px rgba(78, 205, 196, 0.3),
+            border-color: rgba(59, 130, 246, 0.8);
+            background: rgba(30, 58, 138, 0.9);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4),
                         inset 0 2px 8px rgba(0, 0, 0, 0.3);
             transform: translateY(-2px);
         }
@@ -357,26 +358,26 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
-            color: #1a1a2e;
-            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
             font-weight: 700;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(78, 205, 196, 0.5);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
         }
 
         .btn-secondary {
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
             color: #e8e8e8;
-            border: 2px solid rgba(78, 205, 196, 0.4);
+            border: 2px solid rgba(59, 130, 246, 0.5);
         }
 
         .btn-secondary:hover {
-            background: linear-gradient(145deg, rgba(78, 205, 196, 0.2), rgba(26, 26, 46, 0.9));
-            border-color: rgba(78, 205, 196, 0.6);
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.3), rgba(30, 58, 138, 0.9));
+            border-color: rgba(59, 130, 246, 0.7);
             transform: translateY(-2px);
         }
 
@@ -412,8 +413,8 @@
         .custom-checkbox {
             width: 20px;
             height: 20px;
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(15, 15, 35, 0.9));
-            border: 2px solid rgba(78, 205, 196, 0.3);
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
+            border: 2px solid rgba(59, 130, 246, 0.4);
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -423,13 +424,13 @@
         }
 
         .checkbox-wrapper input[type="checkbox"]:checked + .custom-checkbox {
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
-            border-color: rgba(78, 205, 196, 0.8);
-            box-shadow: 0 0 15px rgba(78, 205, 196, 0.4);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            border-color: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
         }
 
         .custom-checkbox i {
-            color: #1a1a2e;
+            color: #ffffff;
             font-size: 0.8rem;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -447,22 +448,22 @@
         }
 
         .checkbox-label a {
-            color: #4ecdc4;
+            color: #3b82f6;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .checkbox-label a:hover {
-            color: #ffd93d;
+            color: #8b5cf6;
         }
 
         .features-section {
-            background: linear-gradient(145deg, rgba(26, 26, 46, 0.7), rgba(15, 15, 35, 0.8));
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.7), rgba(15, 23, 42, 0.8));
             backdrop-filter: blur(20px);
             padding: 30px 0;
             margin-top: 40px;
-            border-top: 1px solid rgba(78, 205, 196, 0.2);
-            border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
             width: 100%;
         }
 
@@ -496,29 +497,29 @@
         .feature-checkmark {
             width: 20px;
             height: 20px;
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.4);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
             flex-shrink: 0;
         }
 
         .feature-checkmark i {
-            color: #1a1a2e;
+            color: #ffffff;
             font-size: 0.8rem;
             font-weight: 700;
         }
 
         .footer {
-            background: linear-gradient(90deg, rgba(15, 15, 35, 0.8), rgba(26, 26, 46, 0.6));
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.8), rgba(30, 58, 138, 0.6));
             padding: 30px 0;
             text-align: center;
             width: 100%;
             margin-top: 0;
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(78, 205, 196, 0.2);
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .footer-links {
@@ -543,14 +544,14 @@
             height: 2px;
             bottom: -8px;
             left: 50%;
-            background: linear-gradient(45deg, #4ecdc4, #ffd93d);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
             transition: all 0.3s ease;
             transform: translateX(-50%);
             border-radius: 2px;
         }
 
         .footer-links a:hover {
-            color: #4ecdc4;
+            color: #3b82f6;
             transform: translateY(-2px);
         }
 
@@ -794,6 +795,132 @@
                 margin-bottom: 15px;
             }
         }
+
+        /* Erfolgsmeldung Styles */
+        .success-message {
+            background: linear-gradient(145deg, rgba(168, 230, 207, 0.3), rgba(30, 58, 138, 0.9));
+            border: 2px solid rgba(168, 230, 207, 0.6);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 25px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 15px 35px rgba(168, 230, 207, 0.3);
+        }
+
+        .success-message h3 {
+            color: #e8e8e8;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .success-message p {
+            color: rgba(232, 232, 232, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .file-upload-group {
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .file-upload-group.show {
+            display: block;
+        }
+
+        .file-upload-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-input {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(145deg, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9));
+            border: 2px dashed rgba(59, 130, 246, 0.5);
+            border-radius: 12px;
+            color: #e8e8e8;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .file-upload-button:hover {
+            border-color: rgba(59, 130, 246, 0.8);
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(30, 58, 138, 0.9));
+        }
+
+        .file-upload-button i {
+            font-size: 1.5rem;
+            color: #3b82f6;
+        }
+
+        .file-info {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: rgba(232, 232, 232, 0.7);
+            text-align: center;
+        }
+
+        .uploaded-file {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(30, 58, 138, 0.8));
+            border-radius: 10px;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .uploaded-file.show {
+            display: block;
+        }
+
+        .uploaded-file-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e8e8e8;
+            font-size: 0.95rem;
+        }
+
+        .uploaded-file-info i {
+            color: #3b82f6;
+            font-size: 1.2rem;
+        }
+
+        .remove-file {
+            background: none;
+            border: none;
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-left: auto;
+            padding: 5px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-file:hover {
+            background-color: rgba(239, 68, 68, 0.2);
+        }
+
     </style>
 </head>
 <body>
@@ -853,6 +980,12 @@
                         <span>Gewerblich</span>
                     </button>
                 </div>
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button class="option-btn" data-value="solarstrom" style="max-width: 200px;">
+                        <i class="fas fa-sun"></i>
+                        <span>Solarstrom</span>
+                    </button>
+                </div>
                 <div class="nav-buttons">
                     <button class="btn btn-secondary" id="back2">Zurück</button>
                 </div>
@@ -877,6 +1010,12 @@
                     <button class="option-btn" data-value="sehr-hoch">
                         <i class="fas fa-industry"></i>
                         <span>Sehr hoher Verbrauch</span>
+                    </button>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button class="option-btn" data-value="abrechnung" style="max-width: 280px;">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Anhand der letzten Abrechnung</span>
                     </button>
                 </div>
                 <div class="nav-buttons">
@@ -906,6 +1045,35 @@
                         <div>
                             <label for="zipCode">Postleitzahl</label>
                             <input type="text" id="zipCode" name="zipCode" placeholder="Ihre Postleitzahl" required>
+                        </div>
+                    </div>
+                    
+                    <!-- File Upload für Abrechnung -->
+                    <div class="form-group file-upload-group" id="fileUploadGroup">
+                        <label>Letzte Abrechnung hochladen</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" 
+                                   id="abrechnungFile" 
+                                   name="abrechnungFile" 
+                                   class="file-upload-input"
+                                   accept=".pdf,.jpg,.jpeg,.png,.gif,.bmp,.webp"
+                                   required>
+                            <div class="file-upload-button">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Datei auswählen (PDF oder Bild)</span>
+                            </div>
+                        </div>
+                        <div class="file-info">
+                            Erlaubte Formate: PDF, JPG, PNG, GIF (max. 10MB)
+                        </div>
+                        <div class="uploaded-file" id="uploadedFile">
+                            <div class="uploaded-file-info">
+                                <i class="fas fa-file-alt"></i>
+                                <span id="fileName"></span>
+                                <button type="button" class="remove-file" id="removeFile" title="Datei entfernen">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     
@@ -976,6 +1144,7 @@
         const answers = {};
         let currentPage = 1;
         const totalPages = 4;
+        let uploadedFile = null;
 
         // Fortschritt aktualisieren
         function updateProgress() {
@@ -1020,6 +1189,23 @@
                 const value = this.dataset.value;
                 answers[pageId] = value;
                 
+                // Show/hide file upload based on page3 selection
+                if (pageId === 'page3') {
+                    const fileUploadGroup = document.getElementById('fileUploadGroup');
+                    const abrechnungFile = document.getElementById('abrechnungFile');
+                    
+                    if (value === 'abrechnung') {
+                        fileUploadGroup.classList.add('show');
+                        abrechnungFile.required = true;
+                    } else {
+                        fileUploadGroup.classList.remove('show');
+                        abrechnungFile.required = false;
+                        abrechnungFile.value = '';
+                        document.getElementById('uploadedFile').classList.remove('show');
+                        uploadedFile = null;
+                    }
+                }
+                
                 // Auto-advance zur nächsten Seite nach kurzer Verzögerung
                 setTimeout(() => {
                     if (pageId === 'page2') {
@@ -1046,7 +1232,11 @@
             let allValid = true;
             
             allFields.forEach(field => {
-                if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
+                if (field.type === 'file') {
+                    if (field.required && !field.files.length) {
+                        allValid = false;
+                    }
+                } else if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
                     allValid = false;
                 }
             });
@@ -1063,6 +1253,38 @@
         // Initial validation
         validateForm();
 
+        // File upload functionality
+        const fileInput = document.getElementById('abrechnungFile');
+        const uploadedFileDiv = document.getElementById('uploadedFile');
+        const fileNameSpan = document.getElementById('fileName');
+        const removeFileBtn = document.getElementById('removeFile');
+
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Check file size (10MB limit)
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('Die Datei ist zu groß. Maximale Dateigröße: 10MB');
+                    this.value = '';
+                    return;
+                }
+                
+                uploadedFile = file;
+                fileNameSpan.textContent = file.name;
+                uploadedFileDiv.classList.add('show');
+                
+                // Update form validation
+                validateForm();
+            }
+        });
+
+        removeFileBtn.addEventListener('click', function() {
+            fileInput.value = '';
+            uploadedFile = null;
+            uploadedFileDiv.classList.remove('show');
+            validateForm();
+        });
+
         // Formular Event Listener
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1075,9 +1297,19 @@
             const formData = new FormData(this);
             const contactData = Object.fromEntries(formData);
             
+            // Add uploaded file info if exists
+            if (uploadedFile) {
+                contactData.uploadedFile = {
+                    name: uploadedFile.name,
+                    size: uploadedFile.size,
+                    type: uploadedFile.type
+                };
+            }
+            
             // Hier würden Sie normalerweise die Daten an einen Server senden
             console.log('Antworten:', answers);
             console.log('Kontaktdaten:', contactData);
+            console.log('Hochgeladene Datei:', uploadedFile);
             
             // Erfolgsmeldung anzeigen
             this.style.display = 'none';
@@ -1088,5 +1320,4 @@
         updateProgress();
     </script>
 </body>
-</html>
 </html>
